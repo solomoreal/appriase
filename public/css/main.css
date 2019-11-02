@@ -1,0 +1,298 @@
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #323232;
+}
+
+/* button styles */
+.btn-primary {
+  color: white !important;
+}
+
+.btn-secondary {
+  background-color: #dedede;
+  border: none;
+}
+
+.btn-accent {
+  background-color: #FFA726;
+  color: white;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn,
+a:not([href]):not([tabindex]) {
+  padding: 10px 20px;
+  color: #ffffff;
+}
+
+/* palette */
+.bg-yellow {
+  background-color: #FB8C00;
+  color: #ffffff;
+}
+
+.bg-blue {
+  background-color: #2196F3;
+  color: #ffffff;
+}
+
+.bg-green {
+  background-color: #4CAF50;
+  color: #ffffff;
+}
+
+.bg-pink {
+  background-color: #E91E63;
+  color: #ffffff;
+}
+
+.bg-purple {
+  background-color: #9C27B0;
+  color: #ffffff;
+}
+
+.bg-blue-gray {
+  background-color: #607D8B;
+  color: #ffffff;
+}
+
+.text-pink {
+  color: #E91E63;
+}
+
+.text-blue {
+  color: #2196F3;
+}
+
+.text-green {
+  color: #4CAF50;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-blue-gray {
+  color: #607D8B;
+}
+
+.text-purple {
+  color: #AB47BC;
+}
+
+.text-orange {
+  color: #FB8C00;
+}
+
+.bd-outline-pink {
+  border: 2px solid #E91E63 !important;
+}
+
+.bd-outline-blue-gray {
+  border: 2px solid #607D8B !important;
+}
+
+/* font size */
+.f-40 {
+  font-size: 40px;
+}
+
+.f-28 {
+  font-size: 28px;
+}
+
+.f-20 {
+  font-size: 20px;
+}
+
+.f-18 {
+  font-size: 18px;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+.f-12 {
+  font-size: 12px;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.nav-item a.nav-link {
+  color: #424242 !important;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: white;
+  outline: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 20;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  transition: all 0.5s;
+}
+
+.sticky+.content {
+  padding-top: 60px;
+}
+
+.minibar {
+  background-image: linear-gradient(to right, #007bff, #7B1FA2);
+  color: #efefef;
+}
+
+.minibar a {
+  color: #E3F2FD;
+  margin: 10px;
+}
+
+.minibar a.active {
+  color: white;
+}
+
+.dropdown .btn {
+  color: #424242;
+}
+
+.shadow {
+  box-shadow: 6px 6px 5px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
+}
+
+.form-control {
+  border: none;
+  background-color: #EEEEEE;
+}
+
+.form-control:focus {
+  border: 1px solid #2196F3;
+  background-color: #EEEEEE;
+  box-shadow: none;
+  outline: none;
+}
+
+.ub-card {
+  min-width: 100px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 8px;
+  position: relative;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  overflow: hidden;
+}
+
+.ub-card .overlay {
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.ub-card .ub-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.ub-card .locale {
+  color: #E1F5FE;
+  font-size: 14px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: #BDBDBD;
+}
+
+hr.line {
+  width: 40%;
+  margin: auto auto auto 20px;
+}
+
+table {
+  border: 1px solid #dcdcdc;
+}
+
+thead {
+  background-color: #dcdcdc;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+tr {
+  height: 60px;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+@media screen and (max-width: 800px) {
+
+  .ub-table th:nth-child(1),
+  .ub-table td:nth-child(1) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .ub-table th:nth-child(3),
+  .ub-table td:nth-child(3) {
+    display: none;
+  }
+
+  .border-left {
+    border-left: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  th,
+  td {
+    padding: 15px;
+  }
+
+  .ub-table th:nth-child(6),
+  .ub-table td:nth-child(6) {
+    display: none;
+  }
+}
+
+/************************* footer section ***************************************/
+.footer a {
+  color: #424242;
+}
+
+.footer .btn {
+  margin-left: 5px;
+}
+
+.footer i {
+  font-size: 24px;
+  margin: 0 20px;
+}
+
+.footer .copy {
+  font-size: 14px;
+}

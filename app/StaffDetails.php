@@ -3,8 +3,19 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
-class StaffDetails extends Model
+class StaffDetails extends Model implements HasMedia
 {
-    //
+    use HasMediaTrait;
+
+    public function registerMediaCollections()
+{
+    $this
+        ->addMediaCollection('avatar')
+        ->singleFile();
+}
+
+    
 }

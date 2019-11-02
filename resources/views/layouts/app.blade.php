@@ -6,18 +6,20 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <title>{{ config('app.name', 'Tega Appraise') }}</title>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Scripts -->
+    <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
