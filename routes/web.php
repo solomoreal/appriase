@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('appraise','AppraisalController@create')->name('get_appraise');
+Route::post('appraise','AppraisalController@store')->name('post_appraise');

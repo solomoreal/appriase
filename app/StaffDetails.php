@@ -17,5 +17,9 @@ class StaffDetails extends Model implements HasMedia
         ->singleFile();
 }
 
+public function user(){
+    return $this->belongsTo('App\User');
+}
+
     
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Appraisal;
+use App\User;
 use Illuminate\Http\Request;
 
 class AppraisalController extends Controller
@@ -24,7 +25,9 @@ class AppraisalController extends Controller
      */
     public function create()
     {
-        //
+        //$user = User::findOrFail($id);
+        $user = new User();
+        return view('appraise',compact('user'));
     }
 
     /**
