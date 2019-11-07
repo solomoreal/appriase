@@ -19,7 +19,7 @@
 
   <!-- Custom styles for this template-->
   <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
-    
+   @yield('page-style') 
 </head>
 <body>
     <div id="app">

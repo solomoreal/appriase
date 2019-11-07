@@ -9,16 +9,16 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Dashboard</title>
+  <title>Appraise</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="{{asset('vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
+  <link href="{{asset('css/sb-admin.css')}}" rel="stylesheet">
 
 </head>
 
@@ -26,7 +26,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand mr-1" href="index.html">Tega Appraise</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -58,18 +58,7 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
-      <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-envelope fa-fw"></i>
-          <span class="badge badge-danger">7</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+      
       <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user-circle fa-fw"></i>
@@ -101,20 +90,16 @@
           <span>Pages</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Login Screens:</h6>
-          <a class="dropdown-item" href="login.html">Login</a>
           <a class="dropdown-item" href="register.html">Register</a>
           <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
           <div class="dropdown-divider"></div>
-          <h6 class="dropdown-header">Other Pages:</h6>
-          <a class="dropdown-item" href="404.html">404 Page</a>
-          <a class="dropdown-item" href="blank.html">Blank Page</a>
+          
         </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+          <span>New Appraisal</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="tables.html">
@@ -143,7 +128,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-comments"></i>
                 </div>
-                <div class="mr-5">26 New Messages!</div>
+                <div class="mr-5">Latest Appraisal</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="#">
                 <span class="float-left">View Details</span>
@@ -159,7 +144,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-list"></i>
                 </div>
-                <div class="mr-5">11 New Tasks!</div>
+                <div class="mr-5">Pending Appraisal </div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="#">
                 <span class="float-left">View Details</span>
@@ -175,7 +160,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-shopping-cart"></i>
                 </div>
-                <div class="mr-5">123 New Orders!</div>
+                <div class="mr-5">Previous Evaluations</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="#">
                 <span class="float-left">View Details</span>
@@ -186,33 +171,12 @@
             </div>
           </div>
           <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-danger o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fas fa-fw fa-life-ring"></i>
-                </div>
-                <div class="mr-5">13 New Tickets!</div>
-              </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
-                <span class="float-left">View Details</span>
-                <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
+            
           </div>
         </div>
 
         <!-- Area Chart Example-->
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-chart-area"></i>
-            Area Chart Example</div>
-          <div class="card-body">
-            <canvas id="myAreaChart" width="100%" height="30"></canvas>
-          </div>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-        </div>
+        
 
         <!-- DataTables Example -->
         <div class="card mb-3">
@@ -230,6 +194,7 @@
                     <th>Age</th>
                     <th>Start date</th>
                     <th>Salary</th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tfoot>
@@ -240,56 +205,63 @@
                     <th>Age</th>
                     <th>Start date</th>
                     <th>Salary</th>
+                    <th></th>
                   </tr>
                 </tfoot>
                 <tbody>
                   <tr>
-                    <td>Tiger Nixon</td>
+                    <td>Benjamin Wakama</td>
                     <td>System Architect</td>
                     <td>Lagos</td>
                     <td>61</td>
                     <td>2011/04/25</td>
                     <td>$320,800</td>
+                  <td><a href="{{route('profile')}}" class="btn btn-primary">View Performance Evaluation</a></td>
                   </tr>
                   <tr>
-                    <td>Garrett Winters</td>
+                    <td>Ugege Idris</td>
                     <td>Accountant</td>
                     <td>Abuja</td>
                     <td>63</td>
                     <td>2011/07/25</td>
                     <td>$170,750</td>
+                    <td><a href="http://" class="btn btn-primary">View Performance Evaluation</a></td>
                   </tr>
                   <tr>
-                    <td>Ashton Cox</td>
+                    <td>Ajah Williams</td>
                     <td>Junior Technical Author</td>
                     <td>Port Harcourt</td>
                     <td>66</td>
                     <td>2009/01/12</td>
                     <td>$86,000</td>
+                    <td><a href="http://" class="btn btn-primary">View Performance Evaluation</a></td>
                   </tr>
                   <tr>
-                    <td>Cedric Kelly</td>
+                    <td>Sule Ahmed</td>
                     <td>Senior Javascript Developer</td>
-                    <td>Edinburgh</td>
+                    <td>Port Harcourt</td>
                     <td>22</td>
                     <td>2012/03/29</td>
                     <td>$433,060</td>
+                    <td><a href="http://" class="btn btn-primary">View Performance Evaluation</a></td>
                   </tr>
                   <tr>
                     <td>Airi Satou</td>
                     <td>Accountant</td>
-                    <td>Tokyo</td>
+                    <td>Port Harcourt</td>
                     <td>33</td>
                     <td>2008/11/28</td>
                     <td>$162,700</td>
+                    <td><a href="http://" class="btn btn-primary">View Performance Evaluation</a></td>
                   </tr>
                   <tr>
                     <td>Brielle Williamson</td>
                     <td>Integration Specialist</td>
-                    <td>New York</td>
+                    <td>Port Harcourt</td>
                     <td>61</td>
                     <td>2012/12/02</td>
                     <td>$372,000</td>
+                    <td><a href="http://" class="btn btn-primary">View Performance Evaluation</a></td>
                   </tr>
                   <tr>
                     <td>Herrod Chandler</td>
@@ -298,30 +270,34 @@
                     <td>59</td>
                     <td>2012/08/06</td>
                     <td>$137,500</td>
+                    <td><a href="http://" class="btn btn-primary">View Performance Evaluation</a></td>
                   </tr>
                   <tr>
                     <td>Rhona Davidson</td>
                     <td>Integration Specialist</td>
-                    <td>Tokyo</td>
+                    <td>Delta</td>
                     <td>55</td>
                     <td>2010/10/14</td>
                     <td>$327,900</td>
+                    <td><a href="http://" class="btn btn-primary">View Performance Evaluation</a></td>
                   </tr>
                   <tr>
                     <td>Colleen Hurst</td>
                     <td>Javascript Developer</td>
-                    <td>San Francisco</td>
+                    <td>Port Harcourt</td>
                     <td>39</td>
                     <td>2009/09/15</td>
                     <td>$205,500</td>
+                    <td><a href="http://" class="btn btn-primary">View Performance Evaluation</a></td>
                   </tr>
                   <tr>
                     <td>Sonya Frost</td>
                     <td>Software Engineer</td>
-                    <td>Edinburgh</td>
+                    <td>Lagos</td>
                     <td>23</td>
                     <td>2008/12/13</td>
                     <td>$103,600</td>
+                    <td><a href="http://" class="btn btn-primary">View Performance Evaluation</a></td>
                   </tr>
                   <tr>
                     <td>Jena Gaines</td>
