@@ -115,14 +115,14 @@ color: #0062cc;
         </div>
         <div class="col-md-6">
             <div class="profile-head">
+                        <h4>
+                            Sophia Phone
+                        </h4>
                         <h5>
-                            Tega Joseph
-                        </h5>
-                        <h6>
-                            Head Of Marketing
-                        </h6> 
+                            Engineer 2
+                        </h5> 
                         <form>
-                            <h2>Appraisal Form</h2>
+                            <h2>performance Evaluation Form</h2>
                             <section class="col-md-8">
                                 
                             <div class="form-row ">
@@ -160,6 +160,7 @@ color: #0062cc;
                                       <option>...</option>
                                     </select>
                                 </div>
+                            </div>
                                 <div class="form-row ">
                                     <div class="form-group col-md-6">
                                       <label for="inputEmail4">communication_skill</label>
@@ -212,7 +213,7 @@ color: #0062cc;
                                     </div>
                                     <div class="form-row ">
                                         <div class="form-group col-md-6">
-                                          <label for="inputEmail4">work_consistencies</label>
+                                          <label for="inputEmail4">consistency</label>
                                           <select id="inputState" class="form-control">
                                               <option selected>Choose...</option>
                                               <option>...</option>
@@ -227,25 +228,21 @@ color: #0062cc;
                                         </div>
                                     </div>
 
-                                    <div class="form-row ">
-                                        <div class="form-group col-md-6">
+                                    <div class="form-row col-md-6">
                                           <label for="inputEmail4">work_quality</label>
                                           <select id="inputState" class="form-control">
                                               <option selected>Choose...</option>
                                               <option>...</option>
-                                            </select>
-                                        </div>
-                                      
-                                        
+                                            </select>      
                                     </div>
                                     <div class="form-row ">
                                         <div class="form-group col-md-6">
                                     <label for="">reviewer_comment</label>
-                                    <textarea name="" id="" cols="10" rows="10"></textarea>
+                                    <textarea name="" id="" cols="40" rows="5"></textarea>
                                         </div>
                                     </div>
                             
-                              <button type="submit" class="btn btn-primary">Submit Evaluation</button>
+                              <button type="submit" class="btn btn-primary btn-block">Submit Evaluation</button>
                             
                         </section>
                           </form>

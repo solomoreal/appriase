@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ config('app.name', 'Appraisal') }}</title>
+        <title>{{ config('app.name', 'SophiaEvaluator') }}</title>
         <script src="{{ asset('js/app.js') }}" defer></script>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -15,9 +15,9 @@
         <!-- Styles -->
         
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-default bg- fixed-top">
             <div class="container">
-              <a class="navbar-brand" href="#">Tega Appraise</a>
+              <a class="navbar-brand" href="#">Sophia Evaluator</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -50,12 +50,12 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
-            color: green;
+            color: pink;
             font-weight: bolder;
             position: relative;">
-              <h1 class="display-3">Welcome To Tega Appraise!</h1>
-              <p class="lead">Say good bye to paper appraisal forms, here you can via your evaluation report and appraise other employees. No bias just login and begin.</p>
-            <a href="{{route('login')}}" class="btn btn-primary btn-lg">Start Here!</a>
+              <h1 class="display-3">Welcome To Sophia Evaluator!</h1>
+              <p class="lead" style="color:navy; font-weight:bolder; font-size:25px;">Say good bye to paper evaluation forms, here you can view your evaluation report and appraise other employees. No bias just login and begin.</p>
+            <a href="{{route('login')}}" class="btn btn-success btn-lg">Enter!</a>
             </header>
         
             <!-- Page Features -->
@@ -66,9 +66,9 @@
           <!-- /.container -->
         
           <!-- Footer -->
-          <footer class="py-5 bg-dark">
+          <footer class="py-5 bg-pink">
             <div class="container">
-              <p class="m-0 text-center text-white">Copyright &copy; Tega 2019</p>
+              <p class="m-0 text-center text-pink">Copyright &copy; Sophia Phone 2019</p>
             </div>
             <!-- /.container -->
           </footer>

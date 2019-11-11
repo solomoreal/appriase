@@ -123,20 +123,18 @@
                         </div>
                         <div class="col-md-6">
                             <div class="profile-head">
+                                        <h4>
+                                          Sophia Phone  
+                                        </h4>
                                         <h5>
-                                            Tega Joseph
+                                            Engineer 2
                                         </h5>
-                                        <h6>
-                                            Head Of Marketing
-                                        </h6>
-                                        <p class="proile-rating">Evaluation Score : <span>60%(good)</span></p>
+                                        <p class="proile-rating">Evaluation Score : <span>70%(v.good)</span></p>
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -148,11 +146,11 @@
                         <div class="col-md-4">
                             <div class="profile-work">
                                 <p>WORK LINK</p>
-                                <a href="">tega@tega.com</a><br/>
+                                <a href="">sofia@mail.com</a><br/>
                                 
                                 <p>SKILLS</p>
-                                <a href="">Marketing</a><br/>
-                                <a href=""></a><br/>
+                                <a href="">Web development</a><br/>
+                                <a href=""> UI/UX </a><br/>
                                 
                             </div>
                         </div>
@@ -164,7 +162,7 @@
                                                     <label>Staff Id</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>Staff027</p>
+                                                    <p>Staff0034</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -172,7 +170,7 @@
                                                     <label>Name</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>Tega Joseph</p>
+                                                    <p>Sophia phone</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -180,7 +178,7 @@
                                                     <label>Email</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>taga@gmail.com</p>
+                                                    <p>sofia@mail.com</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -196,7 +194,7 @@
                                                     <label>Department</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>Marketing</p>
+                                                    <p>Engineering</p>
                                                 </div>
                                             </div>
                                 </div>
@@ -214,7 +212,7 @@
                                                     <label>Salary</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>#300,000</p>
+                                                    <p>#420,000</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -222,7 +220,7 @@
                                                     <label>Working here For</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>5 years</p>
+                                                    <p>7 years</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -230,7 +228,7 @@
                                                     <label>Recent performance Score</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>60%(Good)</p>
+                                                    <p>70%(V.Good)</p>
                                                 </div>
                                             </div>
                                             
@@ -238,13 +236,11 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label>About Evaluation</label><br/>
-                                            <p>Tega was evaluated by 12 staffs</p>
-                                            <p>6 staffs rated him excellent</p>
-                                            <p>3 staffs rated him ok(but can do better)</p>
-                                            <p>3 staffs rated him very poor</p>
-                                            <h2>Overall Rating 60%(good)</h2>
-
-
+                                            <p>Sofia was evaluated by 10 staffs</p>
+                                            <p>6 staffs rated her excellent</p>
+                                            <p>3 staffs rated her ok(but can do better)</p>
+                                            <p></p>
+                                            <h2>Overall Rating 70%(V.good)</h2>
                                         </div>
                                     </div>
                                 </div>
