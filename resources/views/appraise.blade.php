@@ -221,7 +221,7 @@ color: #0062cc;
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="inputPassword4">enthusiasm</label>
-                                          <select id="inputState" class="form-control">
+                                          <select name="work_enthusiasm" id="inputState" class="form-control">
                                               <option selected>Choose...</option>
                                               <option>...</option>
                                             </select>
@@ -230,7 +230,7 @@ color: #0062cc;
 
                                     <div class="form-row col-md-6">
                                           <label for="inputEmail4">work_quality</label>
-                                          <select id="inputState" class="form-control">
+                                          <select id="inputState" name="work_quality" class="form-control">
                                               <option selected>Choose...</option>
                                               <option>...</option>
                                             </select>      
