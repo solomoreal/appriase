@@ -121,124 +121,174 @@ color: #0062cc;
                         <h5>
                             Engineer 2
                         </h5> 
-                        <form>
+                      <form action="{{route('post_appraise')}}" method="POST">
+                          @csrf
                             <h2>performance Evaluation Form</h2>
                             <section class="col-md-8">
-                                
+                            
                             <div class="form-row ">
                               <div class="form-group col-md-6">
-                                <label for="inputEmail4">job_knowledge</label>
-                                <select id="inputState" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option>Excellent</option>
-                                    <option>Good</option>
-                                    <option>Poor</option>
-                                    <option>Can't Tell</option>
+                                <label for="inputEmail4">Job knowledge</label>
+                                <select id="inputState" class="form-control" name="job_knowledge">
+                                    <option selected disabled>Choose...</option>
+                                    <option value="h">Excellent</option>
+                                    <option value="m">Good</option>
+                                    <option value="l">Poor</option>
+                                    <option value="m">Can't Tell</option>
                                   </select>
                               </div>
                               <div class="form-group col-md-6">
-                                <label for="inputPassword4">attitude</label>
-                                <select id="inputState" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option>...</option>
+                                <label for="inputPassword4">Attitude</label>
+                                <select id="inputState" class="form-control" name="attitude">
+                                    <option selected disabled>Choose...</option>
+                                    <option value="h">Excellent</option>
+                                    <option value="m">Good</option>
+                                    <option value="l">Poor</option>
+                                    <option value="m">Can't Tell</option>
                                   </select>
                               </div>
                             </div>
 
                             <div class="form-row ">
                                 <div class="form-group col-md-6">
-                                  <label for="inputEmail4">creativity</label>
-                                  <select id="inputState" class="form-control">
-                                      <option selected>Choose...</option>
-                                      <option>...</option>
+                                  <label for="inputEmail4">Creativity</label>
+                                  <select id="inputState" class="form-control" name="creativity">
+                                    <option selected disabled>Choose...</option>
+                                    <option value="h">Excellent</option>
+                                    <option value="m">Good</option>
+                                    <option value="l">Poor</option>
+                                    <option value="m">Can't Tell</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
                                   <label for="inputPassword4">dependability</label>
-                                  <select id="inputState" class="form-control">
-                                      <option selected>Choose...</option>
-                                      <option>...</option>
-                                    </select>
+                                  <select id="inputState" class="form-control" name="dependability">
+                                    <option selected disabled>Choose...</option>
+                                    <option value="h">Excellent</option>
+                                    <option value="m">Good</option>
+                                    <option value="l">Poor</option>
+                                    <option value="m">Can't Tell</option>                                   </select>
                                 </div>
                             </div>
                                 <div class="form-row ">
                                     <div class="form-group col-md-6">
-                                      <label for="inputEmail4">communication_skill</label>
-                                      <select id="inputState" class="form-control">
-                                          <option selected>Choose...</option>
-                                          <option>...</option>
+                                      <label for="inputEmail4">Communication Skill</label>
+                                      <select id="inputState" class="form-control" name="communication_skill">
+                                        <option selected disabled>Choose...</option>
+                                        <option value="h">Excellent</option>
+                                        <option value="m">Good</option>
+                                        <option value="l">Poor</option>
+                                        <option value="m">Can't Tell</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-6">
-                                      <label for="inputPassword4">dependability</label>
-                                      <select id="inputState" class="form-control">
-                                          <option selected>Choose...</option>
-                                          <option>...</option>
-                                        </select>
+                                      <label for="inputPassword4">Dependability</label>
+                                      <select id="inputState" class="form-control" name="dependability">
+                                        <option selected disabled>Choose...</option>
+                                        <option value="h">Excellent</option>
+                                        <option value="m">Good</option>
+                                        <option value="l">Poor</option>
+                                        <option value="m">Can't Tell</option>                                        </select>
                                        </div>
                                 </div>
 
                                     <div class="form-row ">
                                         <div class="form-group col-md-6">
-                                          <label for="inputEmail4">productivity</label>
-                                          <select id="inputState" class="form-control">
-                                              <option selected>Choose...</option>
-                                              <option>...</option>
+                                          <label for="inputEmail4">Productivity</label>
+                                          <select id="inputState" class="form-control" name="productivity">
+                                            <option selected disabled>Choose...</option>
+                                            <option value="h">Excellent</option>
+                                            <option value="m">Good</option>
+                                            <option value="l">Poor</option>
+                                            <option value="m">Can't Tell</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
-                                          <label for="inputPassword4">work_relation</label>
-                                          <select id="inputState" class="form-control">
-                                              <option selected>Choose...</option>
-                                              <option>...</option>
+                                          <label for="inputPassword4">Work Relation</label>
+                                          <select id="inputState" class="form-control" name="work_relation">
+                                            <option selected disabled>Choose...</option>
+                                            <option value="h">Excellent</option>
+                                            <option value="m">Good</option>
+                                            <option value="l">Poor</option>
+                                            <option value="m">Can't Tell</option>
                                             </select>
                                         </div>
                                     </div>
 
                                     <div class="form-row ">
                                         <div class="form-group col-md-6">
-                                          <label for="inputEmail4">attendance</label>
-                                          <select id="inputState" class="form-control">
-                                              <option selected>Choose...</option>
-                                              <option>...</option>
+                                          <label for="inputEmail4">Attendance</label>
+                                          <select id="inputState" class="form-control" name="attendance">
+                                            <option selected disabled>Choose...</option>
+                                            <option value="h">Excellent</option>
+                                            <option value="m">Good</option>
+                                            <option value="l">Poor</option>
+                                            <option value="m">Can't Tell</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
-                                          <label for="inputPassword4">cooperation</label>
-                                          <select id="inputState" class="form-control">
-                                              <option selected>Choose...</option>
-                                              <option>...</option>
+                                          <label for="inputPassword4">Co-operation</label>
+                                          <select id="inputState" class="form-control" name="cooperation">
+                                            <option selected disabled>Choose...</option>
+                                            <option value="h">Excellent</option>
+                                            <option value="m">Good</option>
+                                            <option value="l">Poor</option>
+                                            <option value="m">Can't Tell</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-row ">
                                         <div class="form-group col-md-6">
                                           <label for="inputEmail4">consistency</label>
-                                          <select id="inputState" class="form-control">
-                                              <option selected>Choose...</option>
-                                              <option>...</option>
+                                          <select id="inputState" class="form-control" name="work_consistencies">
+                                            <option selected disabled>Choose...</option>
+                                            <option value="h">Excellent</option>
+                                            <option value="m">Good</option>
+                                            <option value="l">Poor</option>
+                                            <option value="m">Can't Tell</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="inputPassword4">enthusiasm</label>
-                                          <select name="work_enthusiasm" id="inputState" class="form-control">
-                                              <option selected>Choose...</option>
-                                              <option>...</option>
+                                          <select name="work_enthusiasm" name="enthusiasm" id="inputState" class="form-control">
+                                            <option selected disabled>Choose...</option>
+                                            <option value="h">Excellent</option>
+                                            <option value="m">Good</option>
+                                            <option value="l">Poor</option>
+                                            <option value="m">Can't Tell</option>
                                             </select>
                                         </div>
                                     </div>
 
-                                    <div class="form-row col-md-6">
-                                          <label for="inputEmail4">work_quality</label>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6" >
+                                          <label for="inputEmail4">Work Quality</label>
                                           <select id="inputState" name="work_quality" class="form-control">
-                                              <option selected>Choose...</option>
-                                              <option>...</option>
-                                            </select>      
+                                            <option selected disabled>Choose...</option>
+                                            <option value="h">Excellent</option>
+                                            <option value="m">Good</option>
+                                            <option value="l">Poor</option>
+                                            <option value="m">Can't Tell</option>
+                                            </select> 
+
                                     </div>
+
+                                    <div class="form-group col-md-6" >
+
+                                      <label for="inputEmail4">Initiative</label>
+                                      <select id="inputState" name="work_quality" class="form-control" name="initiative">
+                                        <option selected disabled>Choose...</option>
+                                        <option value="h">Excellent</option>
+                                        <option value="m">Good</option>
+                                        <option value="l">Poor</option>
+                                        <option value="m">Can't Tell</option>
+                                        </select>                                              
+                                </div>
+                              </div>
                                     <div class="form-row ">
                                         <div class="form-group col-md-6">
-                                    <label for="">reviewer_comment</label>
-                                    <textarea name="" id="" cols="40" rows="5"></textarea>
+                                    <label for="">Comment</label>
+                                    <textarea name="reviewer_comment" id="" cols="40" rows="5"></textarea>
                                         </div>
                                     </div>
                             
@@ -246,7 +296,7 @@ color: #0062cc;
                             
                         </section>
                           </form>
-                        
+                
             </div>
         </div>
     </div>

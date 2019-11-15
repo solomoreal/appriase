@@ -38,7 +38,27 @@ class AppraisalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //return $request->all();
+        Appraisal::create([
+            'reviewer_id' => $request->reviewer_id,
+            'reviewee_id' => $request->reviewee_id,
+            'job_knowledge' => $request->job_knowledge,
+            'work_quality' => $request->work_quality,
+            'work_consistencies' => $request->work_consistencies,
+            'enthusiasm' => $request->enthusiasm,
+            'cooperation' => $request->cooperation,
+            'attitude' => $request->attitude,
+            'initiative' => $request->initiative,
+            'work_relation' => $request->work_relation,
+            'creativity' => $request->creativity,
+            'attendance' => $request->attendance,
+            'productivity' => $request->productivity,
+            'dependability'=> $request->dependability,
+            'communication_skill' => $request->communication_skill,
+            'reviewer_comment' => $request->reviewer_comment,
+            ]);
+
+            return back();
     }
 
     /**
