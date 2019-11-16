@@ -105,13 +105,12 @@ color: #0062cc;
 <div class="col-md-12">
     <div class="row">
         <div class="col-md-4">
-                <form action="{{route('post_appraise')}}" method="POST">
-                        @csrf
+        
+            
             <div class="profile-img">
-            <img src="{{asset('img/man_in_suit.jpg')}}" alt="" class="img-fluid"/>
+            <img src="{{$user->staffDetails ? asset($user->staffDetails->getFirstMedia('avatar')->getFullUrl()) : asset('img/no_image.jpg')}}" alt="" class="img-fluid"/>
                 <div class="file btn btn-lg btn-primary">
-                    Upload Photo
-                    <input type="file" name="file"/>
+                     Photo
                 </div>
             </div>
         </div>
@@ -126,179 +125,74 @@ color: #0062cc;
                       
                             <h2>Edit Your Profile Here</h2>
                             <section class="col-md-8">
-                            
+                                    <form action="{{route('post_edit_profile')}}" method="POST" enctype="multipart/form-data">
+                                        @csrf
                             <div class="form-row ">
                               <div class="form-group col-md-6">
-                                <label for="inputEmail4">Job knowledge</label>
-                                <select id="inputState" class="form-control" name="job_knowledge">
-                                    <option selected disabled>Choose...</option>
-                                            <option value="100">Excellent</option>
-                                            <option value="60">Good</option>
-                                            <option value="10">Poor</option>
-                                            <option value="50">Can't Tell</option>
-                                  </select>
+                                <label for="inputEmail4">First Name</label>
+                                <input id="inputState" class="form-control" name="first_name">
+                                    
                               </div>
                               <div class="form-group col-md-6">
-                                <label for="inputPassword4">Attitude</label>
-                                <select id="inputState" class="form-control" name="attitude">
-                                    <option selected disabled>Choose...</option>
-                                            <option value="100">Excellent</option>
-                                            <option value="60">Good</option>
-                                            <option value="10">Poor</option>
-                                            <option value="50">Can't Tell</option>
-                                  </select>
+                                <label for="inputPassword4">Middle Name</label>
+                                <input id="inputState" class="form-control" name="middle_name">
                               </div>
                             </div>
 
                             <div class="form-row ">
                                 <div class="form-group col-md-6">
-                                  <label for="inputEmail4">Creativity</label>
-                                  <select id="inputState" class="form-control" name="creativity">
-                                      <option selected disabled>Choose...</option>
-                                      <option value="100">Excellent</option>
-                                      <option value="60">Good</option>
-                                      <option value="10">Poor</option>
-                                      <option value="50">Can't Tell</option>
-                                    </select>
+                                  <label for="inputEmail4">Last Name</label>
+                                  <input id="inputState" class="form-control" name="last_name">
                                 </div>
                                 <div class="form-group col-md-6">
-                                  <label for="inputPassword4">dependability</label>
-                                  <select id="inputState" class="form-control" name="dependability">
-                                      <option selected disabled>Choose...</option>
-                                      <option value="100">Excellent</option>
-                                      <option value="60">Good</option>
-                                      <option value="10">Poor</option>
-                                      <option value="50">Can't Tell</option>                                   </select>
-                                </div>
+                                  <label for="inputPassword4">Department</label>
+                                  <input id="inputState" class="form-control" name="department">                     </div>
                             </div>
                                 <div class="form-row ">
                                     <div class="form-group col-md-6">
-                                      <label for="inputEmail4">Communication Skill</label>
-                                      <select id="inputState" class="form-control" name="communication_skill">
-                                          <option selected disabled>Choose...</option>
-                                          <option value="100">Excellent</option>
-                                          <option value="60">Good</option>
-                                          <option value="10">Poor</option>
-                                          <option value="50">Can't Tell</option>
-                                        </select>
+                                      <label for="inputEmail4">Position</label>
+                                      <input id="inputState" class="form-control" name="position">
                                     </div>
                                     <div class="form-group col-md-6">
-                                      <label for="inputPassword4">Dependability</label>
-                                      <select id="inputState" class="form-control" name="dependability">
-                                          <option selected disabled>Choose...</option>
-                                          <option value="100">Excellent</option>
-                                          <option value="60">Good</option>
-                                          <option value="10">Poor</option>
-                                          <option value="50">Can't Tell</option>                                        </select>
-                                       </div>
+                                      <label for="inputPassword4">Office Location</label>
+                                      <input id="inputState" class="form-control" name="location">                  
+                                    </div>
                                 </div>
 
                                     <div class="form-row ">
                                         <div class="form-group col-md-6">
-                                          <label for="inputEmail4">Productivity</label>
-                                          <select id="inputState" class="form-control" name="productivity">
-                                              <option selected disabled>Choose...</option>
-                                              <option value="100">Excellent</option>
-                                              <option value="60">Good</option>
-                                              <option value="10">Poor</option>
-                                              <option value="50">Can't Tell</option>
-                                            </select>
+                                          <label for="inputEmail4">Age</label>
+                                          <input id="inputState" class="form-control" name="age" type="number">
                                         </div>
                                         <div class="form-group col-md-6">
-                                          <label for="inputPassword4">Work Relation</label>
-                                          <select id="inputState" class="form-control" name="work_relation">
-                                              <option selected disabled>Choose...</option>
-                                              <option value="100">Excellent</option>
-                                              <option value="60">Good</option>
-                                              <option value="10">Poor</option>
-                                              <option value="50">Can't Tell</option>
-                                            </select>
+                                          <label for="inputPassword4">Salary</label>
+                                          <input id="inputState" class="form-control" name="salary" type="number">
                                         </div>
                                     </div>
 
                                     <div class="form-row ">
                                         <div class="form-group col-md-6">
-                                          <label for="inputEmail4">Attendance</label>
-                                          <select id="inputState" class="form-control" name="attendance">
-                                              <option selected disabled>Choose...</option>
-                                              <option value="100">Excellent</option>
-                                              <option value="60">Good</option>
-                                              <option value="10">Poor</option>
-                                              <option value="50">Can't Tell</option>
-                                            </select>
+                                          <label for="inputEmail4">Employment Date</label>
+                                          <input id="inputState" class="form-control" name="start_date" type="date">
                                         </div>
+                                        
                                         <div class="form-group col-md-6">
-                                          <label for="inputPassword4">Co-operation</label>
-                                          <select id="inputState" class="form-control" name="cooperation">
-                                              <option selected disabled>Choose...</option>
-                                              <option value="100">Excellent</option>
-                                              <option value="60">Good</option>
-                                              <option value="10">Poor</option>
-                                              <option value="50">Can't Tell</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                                <label for="inputEmail4">Photo</label>
+                                                <input id="inputState" class="form-control" name="avatar" type="file">
+                                              </div>
+                                    </div> 
                                     <div class="form-row ">
-                                        <div class="form-group col-md-6">
-                                          <label for="inputEmail4">consistency</label>
-                                          <select id="inputState" class="form-control" name="work_consistencies">
-                                              <option selected disabled>Choose...</option>
-                                              <option value="100">Excellent</option>
-                                              <option value="60">Good</option>
-                                              <option value="10">Poor</option>
-                                              <option value="50">Can't Tell</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                          <label for="inputPassword4">Enthusiasm</label>
-                                          <select name="enthusiasm" id="inputState" class="form-control">
-                                            <option selected disabled>Choose...</option>
-                                            <option value="100">Excellent</option>
-                                            <option value="60">Good</option>
-                                            <option value="10">Poor</option>
-                                            <option value="50">Can't Tell</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6" >
-                                          <label for="inputEmail4">Work Quality</label>
-                                          <select id="inputState" name="work_quality" class="form-control">
-                                              <option selected disabled>Choose...</option>
-                                              <option value="100">Excellent</option>
-                                              <option value="60">Good</option>
-                                              <option value="10">Poor</option>
-                                              <option value="50">Can't Tell</option>
-                                            </select> 
-
-                                    </div>
-
-                                    <div class="form-group col-md-6" >
-
-                                      <label for="inputEmail4">Initiative</label>
-                                      <select id="inputState" class="form-control" name="initiative">
-                                          <option selected disabled>Choose...</option>
-                                          <option value="100">Excellent</option>
-                                          <option value="60">Good</option>
-                                          <option value="10">Poor</option>
-                                          <option value="50">Can't Tell</option>
-                                        </select>                                              
-                                </div>
-                              </div>
-                                    <div class="form-row ">
-                                        <div class="form-group col-md-6">
-                                    <label for="">Comment</label>
-                                    <textarea name="reviewer_comment" id="" cols="40" rows="5"></textarea>
-                                        </div>
-                                    </div>
-                            
-                              <button type="submit" class="btn btn-primary btn-block">Submit Evaluation</button>
-                            
-                        </section>
-                          </form>
-                
+                                            <div class="form-group col-md-6">
+                                              <label for="inputEmail4">Phone Numner</label>
+                                              <input id="inputState" class="form-control" name="phone" type="text">
+                                            </div>
+                                            
+                                            
+                                        </div>                 
+                              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        </section>                                
             </div>
+        </form>
         </div>
     </div>
   

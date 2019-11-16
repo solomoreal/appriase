@@ -114,7 +114,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="profile-img">
-                            <img src="{{asset('img/man_in_suit.jpg')}}" alt=""/>
+                            <img src="{{$user->staffDetails ? asset($user->staffDetails->getFirstMedia('avatar')->getFullUrl()) : asset('img/no_image.jpg')}}" alt=""/>
                                 <div class="file btn btn-lg btn-primary">
                                     Change Photo
                                     <input type="file" name="file"/>
@@ -146,7 +146,7 @@
                         <div class="col-md-4">
                             <div class="profile-work">
                                 <p>WORK LINK</p>
-                                <a href="">sofia@mail.com</a><br/>
+                            <a href="">{{$user->email}}</a><br/>
                                 
                                 <p>SKILLS</p>
                                 <a href="">Web development</a><br/>
@@ -170,7 +170,7 @@
                                                     <label>Name</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>Sophia phone</p>
+                                                    <p>{{$user->staffDetails ? $user->staffDetails->first_name." ". $user->staffDetails->last_name : $user->name}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -178,7 +178,7 @@
                                                     <label>Email</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>sofia@mail.com</p>
+                                                <p>{{$user->email}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">

@@ -100,9 +100,28 @@ class AppraisalController extends Controller
      * @param  \App\Appraisal  $appraisal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Appraisal $appraisal)
+    public function update(Request $request)
     {
-        //
+        //dd($request->all());
+        $detail = new EmployeeDetail();
+        $detail->user_id = auth()->user()->id;
+        $detail->first_name = $request->first_name;
+        $detail->middle_name = $request->middle_name;
+        $detail->last_name = $request->last_name;
+        $detail->department = $request->department;
+        $detail->position = $request->position;
+        $detail->location = $request->location;
+        $detail->salary = $request->salary;
+        $detail->age = $request->age;
+        $detail->phone = $request->phone;
+        $detail->start_date = $request->start_date;
+
+        $detail->save();
+        if($request->avatar){
+            $detail->addmedia($request->avatar)->toMediaCollection('avatar');
+        }
+
+
     }
 
     /**
