@@ -124,10 +124,10 @@
                         <div class="col-md-6">
                             <div class="profile-head">
                                         <h4>
-                                          Sophia Phone  
+                                        {{$user->staffDetails ? $user->staffDetails->first_name." ". $user->staffDetails->last_name : $user->name}}  
                                         </h4>
                                         <h5>
-                                            Engineer 2
+                                            {{$user->staffDetails ? $user->staffDetails->position : ""}}
                                         </h5>
                                         <p class="proile-rating">Evaluation Score : <span>70%(v.good)</span></p>
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">

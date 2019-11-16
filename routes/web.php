@@ -20,10 +20,7 @@ Auth::routes();
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('appraise','AppraisalController@create')->name('get_appraise');
 Route::post('appraise','AppraisalController@store')->name('post_appraise');
-route::get('profile',function(){
-    return view('profile');
-})->name('profile');
+Route::get('profile/{id}','AppraisalController@show')->name('profile');
+Route::get('edit_profile/{id}','AppraisalController@edit')->name('edit_profile');
 
-route::get('appraise',function(){
-    return view('appraise');
-})->name('appraise');
+

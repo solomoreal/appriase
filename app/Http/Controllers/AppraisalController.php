@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Appraisal;
 use App\User;
 use Illuminate\Http\Request;
+use App\EmployeeDetail;
 
 class AppraisalController extends Controller
 {
@@ -13,6 +14,12 @@ class AppraisalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         //
@@ -40,7 +47,7 @@ class AppraisalController extends Controller
     {
         //return $request->all();
         Appraisal::create([
-            'reviewer_id' => $request->reviewer_id,
+            'reviewer_id' => auth()->user()->id,
             'reviewee_id' => $request->reviewee_id,
             'job_knowledge' => $request->job_knowledge,
             'work_quality' => $request->work_quality,
@@ -67,9 +74,11 @@ class AppraisalController extends Controller
      * @param  \App\Appraisal  $appraisal
      * @return \Illuminate\Http\Response
      */
-    public function show(Appraisal $appraisal)
+    public function show($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $appraisals = $user->appraisals;
+        return view('profile',compact('user','appraisals'));
     }
 
     /**
@@ -78,9 +87,10 @@ class AppraisalController extends Controller
      * @param  \App\Appraisal  $appraisal
      * @return \Illuminate\Http\Response
      */
-    public function edit(Appraisal $appraisal)
+    public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('edit_profile',compact('user'));
     }
 
     /**

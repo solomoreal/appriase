@@ -105,10 +105,12 @@ color: #0062cc;
 <div class="col-md-12">
     <div class="row">
         <div class="col-md-4">
+                <form action="{{route('post_appraise')}}" method="POST">
+                        @csrf
             <div class="profile-img">
             <img src="{{asset('img/man_in_suit.jpg')}}" alt="" class="img-fluid"/>
                 <div class="file btn btn-lg btn-primary">
-                    Staff Photo
+                    Upload Photo
                     <input type="file" name="file"/>
                 </div>
             </div>
@@ -116,14 +118,13 @@ color: #0062cc;
         <div class="col-md-6">
             <div class="profile-head">
                         <h4>
-                            Sophia Phone
+                                {{$user->staffDetails ? $user->staffDetails->first_name." ". $user->staffDetails->last_name : $user->name}}
                         </h4>
                         <h5>
-                            Engineer 2
+                                {{$user->staffDetails ? $user->staffDetails->position : ""}}
                         </h5> 
-                      <form action="{{route('post_appraise')}}" method="POST">
-                          @csrf
-                            <h2>performance Evaluation Form</h2>
+                      
+                            <h2>Edit Your Profile Here</h2>
                             <section class="col-md-8">
                             
                             <div class="form-row ">
