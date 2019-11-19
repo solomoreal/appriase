@@ -138,9 +138,11 @@
                                 </ul>
                             </div>
                         </div>
+                        @if(Auth::user()->id == $user->id)
                         <div class="col-md-2">
                         <a href="{{route('edit_profile',['id' => $user->id])}}" class="profile-edit-btn" >Edit profile</a>
                         </div>
+                        @endif
                     </div>
                     <div class="row">
                         <div class="col-md-4">

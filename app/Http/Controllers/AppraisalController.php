@@ -84,6 +84,7 @@ class AppraisalController extends Controller
             array_unshift($scores, [$appraisal->job_knowledge,$appraisal->work_quality,$appraisal->work_consistencies,$appraisal->enthusiasm,$appraisal->cooperation,$appraisal->attitude,$appraisal->initiative,$appraisal->work_relation,$appraisal->creativity,$appraisal->attendance,$appraisal->productivity,$appraisal->dependability,$appraisal->communication_skill]);
             
         }
+        if(isset($scores[0])){
          $total_score = (array_sum($scores[0]));
          $score = round($total_score/1300 * 100,0);
          $remark = "";
@@ -100,7 +101,13 @@ class AppraisalController extends Controller
         }elseif($score <= 49 && $score <= 0){
             $remark = 'Poor';
             $comment = 'This rating indicates a below average performance, Not good';
-        }
+        } 
+    }else{
+        $remark = null;
+        $score = null;
+        $comment = null;
+
+    }
         
         return view('profile',compact('user','appraisals','score','remark','comment'));
     }
@@ -145,7 +152,7 @@ class AppraisalController extends Controller
             $detail->addmedia($request->avatar)->toMediaCollection('avatar');
         }
 
-
+        return redirect(route('profile',['id' => auth()->user()->id]));
     }
 
     public function appraisalList(){
