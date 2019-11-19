@@ -33,8 +33,18 @@
                   <a class="nav-link" href="{{route('login')}}">signin</a>
                   </li>
                   @else
+                <a class="nav-link btn btn-primary" href="{{route('dashboard')}}">Dashboard</a>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">signout</a>
+                      <a class="nav-link" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                       {{ __('Sign Out') }}
+                   </a>
+
+                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                       @csrf
+                   </form>
+
                   </li>
                   @endguest
                   </ul>
