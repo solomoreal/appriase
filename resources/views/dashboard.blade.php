@@ -106,6 +106,11 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Appraisal</span></a>
       </li>
+      <li class="nav-item">
+      <a class="nav-link" href="{{route('dashboard')}}">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Employees</span></a>
+      </li>
     </ul>
 
     <div id="content-wrapper">

@@ -106,7 +106,7 @@ color: #0062cc;
     <div class="row">
         <div class="col-md-4">
         
-            
+          <a href="{{route('dashboard')}}" class="btn btn-primary my-3 mb-2">Back To Dashboard</a>
             <div class="profile-img">
             <img src="{{$user->staffDetails ? asset($user->staffDetails->getFirstMedia('avatar')->getFullUrl()) : asset('img/no_image.jpg')}}" alt="" class="img-fluid"/>
                 <div class="file btn btn-lg btn-primary">

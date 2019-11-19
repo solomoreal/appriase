@@ -78,7 +78,26 @@ class AppraisalController extends Controller
     {
         $user = User::findOrFail($id);
         $appraisals = $user->appraisals;
-        return view('profile',compact('user','appraisals'));
+        $scores = [];
+        foreach ($appraisals as $appraisal) {
+            //dd($appraisal);
+            array_unshift($scores, [$appraisal->job_knowledge,$appraisal->work_quality,$appraisal->work_consistencies,$appraisal->enthusiasm,$appraisal->cooperation,$appraisal->attitude,$appraisal->initiative,$appraisal->work_relation,$appraisal->creativity,$appraisal->attendance,$appraisal->productivity,$appraisal->dependability,$appraisal->communication_skill]);
+            
+        }
+         $total_score = (array_sum($scores[0]));
+         $score = $total_score/1300 * 100;
+         $remark = "";
+         if($score >= 70 ){
+             $remark = 'V.Good';
+         }elseif($score >= 60 && $score <= 69){
+             $remark = 'Good';
+         }elseif($score >= 50 && $score <= 59){
+            $remark = 'Ok';
+        }elseif($score <= 49 && $score <= 0){
+            $remark = 'Poor';
+        }
+        
+        return view('profile',compact('user','appraisals','score','remark'));
     }
 
     /**

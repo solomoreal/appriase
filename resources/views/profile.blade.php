@@ -116,7 +116,7 @@
                             <div class="profile-img">
                             <img src="{{$user->staffDetails ? asset($user->staffDetails->getFirstMedia('avatar')->getFullUrl()) : asset('img/no_image.jpg')}}" alt=""/>
                                 <div class="file btn btn-lg btn-primary">
-                                    Change Photo
+                                    Staff Photo
                                     <input type="file" name="file"/>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@
                                         <h5>
                                             {{$user->staffDetails ? $user->staffDetails->position : ""}}
                                         </h5>
-                                        <p class="proile-rating">Evaluation Score : <span>70%(v.good)</span></p>
+                                    <p class="proile-rating">Evaluation Score : <span>{{$score}}%({{$remark}})</span></p>
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                        <a href="{{route('edit_profile',['id' => $user->id])}}" class="profile-edit-btn" >Edit profile</a>
                         </div>
                     </div>
                     <div class="row">
@@ -186,7 +186,7 @@
                                                     <label>Phone</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>0801234567</p>
+                                                    <p>{{$user->staffDetails ? $user->staffDetails->phone : ""}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -194,7 +194,7 @@
                                                     <label>Department</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>Engineering</p>
+                                                    <p>{{$user->staffDetails ? $user->staffDetails->department : ""}}</p>
                                                 </div>
                                             </div>
                                 </div>
@@ -212,15 +212,15 @@
                                                     <label>Salary</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>#420,000</p>
+                                                    <p>{{$user->staffDetails ? $user->staffDetails->salary : ""}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label>Working here For</label>
+                                                    <label>Employment Date</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>7 years</p>
+                                                    <p>{{$user->staffDetails ? $user->staffDetails->start_date : ""}}</p>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -228,7 +228,7 @@
                                                     <label>Recent performance Score</label>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <p>70%(V.Good)</p>
+                                                <p>{{$score}}%</p>
                                                 </div>
                                             </div>
                                             
@@ -236,11 +236,9 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label>About Evaluation</label><br/>
-                                            <p>Sofia was evaluated by 10 staffs</p>
-                                            <p>6 staffs rated her excellent</p>
-                                            <p>3 staffs rated her ok(but can do better)</p>
+                                            <p>{{Auth::user()->name}} was evaluated by {{count($appraisals)}} Employee(s)</p> 
                                             <p></p>
-                                            <h2>Overall Rating 70%(V.good)</h2>
+                                        <h2>Overall Rating: {{$score}}%({{$remark}})</h2>
                                         </div>
                                     </div>
                                 </div>
