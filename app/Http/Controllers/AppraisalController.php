@@ -98,7 +98,7 @@ class AppraisalController extends Controller
          }elseif($score >= 50 && $score <= 59){
             $remark = 'Ok';
             $comment = 'This rating indicates an average performance, Can do better';
-        }elseif($score <= 49 && $score <= 0){
+        }elseif($score <= 49 && $score >= 0){
             $remark = 'Poor';
             $comment = 'This rating indicates a below average performance, Not good';
         } 
