@@ -106,7 +106,7 @@ color: #0062cc;
     <div class="row">
         <div class="col-md-4">
             <div class="profile-img">
-            <img src="{{asset('img/man_in_suit.jpg')}}" alt="" class="img-fluid"/>
+            <img src="{{$user->staffDetails ? asset($user->staffDetails->getFirstMedia('avatar')->getFullUrl()) : asset('img/no_image.jpg')}}" alt="" class="img-fluid"/>
                 <div class="file btn btn-lg btn-primary">
                     Staff Photo
                     <input type="file" name="file"/>
@@ -116,10 +116,10 @@ color: #0062cc;
         <div class="col-md-6">
             <div class="profile-head">
                         <h4>
-                            Sophia Phone
+                            {{$user->staffDetails ? $user->staffDetails->first_name." ". $user->staffDetails->last_name : $user->name}}
                         </h4>
                         <h5>
-                            Engineer 2
+                            {{$user->staffDetails ? $user->staffDetails->position : ""}}
                         </h5> 
                       <form action="{{route('post_appraise')}}" method="POST">
                           @csrf
@@ -226,6 +226,7 @@ color: #0062cc;
                                               <option value="50">Can't Tell</option>
                                             </select>
                                         </div>
+                                      <input type="hidden" name="reviewee_id" value="{{$user->id}}">
                                         <div class="form-group col-md-6">
                                           <label for="inputPassword4">Co-operation</label>
                                           <select id="inputState" class="form-control" name="cooperation">

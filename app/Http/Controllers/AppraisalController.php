@@ -30,10 +30,10 @@ class AppraisalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         //$user = User::findOrFail($id);
-        $user = new User();
+        $user = User::findOrFail($id);
         return view('appraise',compact('user'));
     }
 
@@ -85,19 +85,24 @@ class AppraisalController extends Controller
             
         }
          $total_score = (array_sum($scores[0]));
-         $score = $total_score/1300 * 100;
+         $score = round($total_score/1300 * 100,0);
          $remark = "";
+         $comment = "";
          if($score >= 70 ){
              $remark = 'V.Good';
+             $comment = 'This rating indicates very high performance, and qualifies the employee for future promotion considerations';
          }elseif($score >= 60 && $score <= 69){
              $remark = 'Good';
+             $comment = 'This rating indicates an above average performance, but not recommended for promotion';
          }elseif($score >= 50 && $score <= 59){
             $remark = 'Ok';
+            $comment = 'This rating indicates an average performance, Can do better';
         }elseif($score <= 49 && $score <= 0){
             $remark = 'Poor';
+            $comment = 'This rating indicates a below average performance, Not good';
         }
         
-        return view('profile',compact('user','appraisals','score','remark'));
+        return view('profile',compact('user','appraisals','score','remark','comment'));
     }
 
     /**
@@ -141,6 +146,11 @@ class AppraisalController extends Controller
         }
 
 
+    }
+
+    public function appraisalList(){
+        $users = User::latest()->paginate(10);
+        return view('appraisal_list',compact('users'));
     }
 
     /**

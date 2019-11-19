@@ -239,6 +239,7 @@
                                             <p>{{Auth::user()->name}} was evaluated by {{count($appraisals)}} Employee(s)</p> 
                                             <p></p>
                                         <h2>Overall Rating: {{$score}}%({{$remark}})</h2>
+                                        <p>{{$comment}}</p>
                                         </div>
                                     </div>
                                 </div>

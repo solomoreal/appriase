@@ -25,6 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::latest()->paginate(10);
-        return view('dashboard',compact('users'));
+
+        return auth()->user()->role == 'admin' ? view('dashboard',compact('users')) : view('appraisal_list',compact('users')) ;
     }
 }

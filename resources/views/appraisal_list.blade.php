@@ -112,10 +112,10 @@
           <span>New Appraisal</span></a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="{{route('profile',['id' => Auth::user()->id])}}">
-              <i class="fas fa-fw fa-table"></i>
-              <span>My Profile</span></a>
-          </li>
+      <a class="nav-link" href="{{route('profile',['id' => Auth::user()->id])}}">
+          <i class="fas fa-fw fa-table"></i>
+          <span>My Profile</span></a>
+      </li>
       @if(Auth::user()->role == 'admin')
       <li class="nav-item">
       <a class="nav-link" href="{{route('dashboard')}}">
@@ -128,10 +128,6 @@
               document.getElementById('logout-form').submit();">
             {{ __('Logout') }}
       </a>
-
-      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-          @csrf
-      </form>
     </ul>
 
     <div id="content-wrapper">
@@ -195,7 +191,7 @@
                       <td>{{$user->staffDetails ? $user->staffDetails->age : ""}}</td>
                       <td>{{$user->staffDetails ? $user->staffDetails->start_date : ""}}</td>
                       <td>{{$user->staffDetails ? $user->staffDetails->salary : ""}}</td>
-                    <td><a href="{{route('profile',['id' =>$user->id])}}" class="btn btn-primary">View Performance Evaluation</a></td>
+                    <td><a href="{{route('get_appraise',['id' =>$user->id])}}" class="btn btn-primary">Evaluate Now</a></td>
                     </tr>  
                     @endforeach
                   @endisset
