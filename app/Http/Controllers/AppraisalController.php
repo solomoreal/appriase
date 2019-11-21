@@ -9,27 +9,13 @@ use App\EmployeeDetail;
 
 class AppraisalController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
+    
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create($id)
     {
         //$user = User::findOrFail($id);
@@ -168,6 +154,7 @@ class AppraisalController extends Controller
      */
     public function destroy(Appraisal $appraisal)
     {
-        //
+        $appraisal->delete();
+        return back();
     }
 }
