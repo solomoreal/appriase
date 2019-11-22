@@ -238,7 +238,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label>About Evaluation</label><br/>
-                                            <p>{{Auth::user()->name}} was evaluated by {{count($appraisals)}} Employee(s)</p> 
+                                            <p>{{$user->name}} was evaluated by {{count($appraisals)}} Employee(s)</p> 
                                             <p></p>
                                         <h2>Overall Rating: {{$score}}%({{$remark}})</h2>
                                         <p>{{$comment}}</p>

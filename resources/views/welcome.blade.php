@@ -17,7 +17,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-default bg- fixed-top">
             <div class="container">
-              <a class="navbar-brand" href="#">Sophia Evaluator</a>
+              <a class="navbar-brand" href="#">Tega Appraiser</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -60,12 +60,12 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
-            color: pink;
+            color: green;
             font-weight: bolder;
             position: relative;">
-              <h1 class="display-3">Welcome To Sophia Evaluator!</h1>
-              <p class="lead" style="color:navy; font-weight:bolder; font-size:25px;">Say good bye to paper evaluation forms, here you can view your evaluation report and appraise other employees. No bias just login and begin.</p>
-            <a href="{{route('login')}}" class="btn btn-success btn-lg">Enter!</a>
+              <h1 class="display-3"> Tega Appraise!</h1>
+              <p class="lead" style="color:yellow; font-weight:bolder; font-size:25px;">Say good bye to paper evaluation forms, here you can view your evaluation report and appraise other employees. login and begin.</p>
+            <a href="{{route('login')}}" class="btn btn-success btn-lg">Begin Here!</a>
             </header>
         
             <!-- Page Features -->
@@ -78,7 +78,7 @@
           <!-- Footer -->
           <footer class="py-5 bg-pink">
             <div class="container">
-              <p class="m-0 text-center text-pink">Copyright &copy; Sophia Phone 2019</p>
+              <p class="m-0 text-center text-pink">Copyright &copy; Tega 2019</p>
             </div>
             <!-- /.container -->
           </footer>
