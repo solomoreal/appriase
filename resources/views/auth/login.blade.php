@@ -2,10 +2,10 @@
 
 @section('content')
 
-<body class="bg-info">
+<body class="bg-dark">
 
     <div class="container">
-      <div class="card card-login mx-auto mt-5 rounded-circle">
+      <div class="card card-login mx-auto mt-5">
         <div class="card-header text-center">Login</div>
         <div class="card-body">
             <form method="POST" action="{{ route('login') }}">
@@ -30,7 +30,7 @@
                 </label>
               </div>
             </div>
-            <button class="btn btn-primary btn-block rounded-circle" type="submit">Login</button>
+            <button class="btn btn-primary btn-block " type="submit">Login</button>
           </form>
           <div class="text-center">
             @if (Route::has('password.request'))

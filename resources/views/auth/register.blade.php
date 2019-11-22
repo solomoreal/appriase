@@ -4,7 +4,7 @@
 
 {{-- new form --}}
 
-<div class="container bg-info">
+<div class="container bg-white">
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">Staff Registration</div>
       <div class="card-body">
