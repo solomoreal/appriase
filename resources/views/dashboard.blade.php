@@ -24,7 +24,7 @@
 
 <body id="page-top">
 
-  <nav class="navbar navbar-expand navbar-dark bg-pink static-top">
+  <nav class="navbar navbar-expand navbar-dark bg-secondary static-top">
 
   <a class="navbar-brand mr-1" href="{{route('landing')}}">Tega</a>
 
@@ -71,7 +71,7 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="sidebar navbar-nav bg-info">
+    <ul class="sidebar navbar-nav bg-dark">
       <li class="nav-item active">
         <a class="nav-link" href="{{route('dashboard')}}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -182,6 +182,7 @@
                 <tbody>
                   @isset($users)
                   @foreach($users as $user)
+                  @if($user->role != 'admin')
                   <tr>
                       <td>{{$user->staffDetails ? $user->staffDetails->first_name." ". $user->staffDetails->last_name : $user->name}}</td>
                       <td>{{$user->staffDetails ? $user->staffDetails->position : ""}}</td>
@@ -191,6 +192,7 @@
                       <td>{{$user->staffDetails ? $user->staffDetails->salary : ""}}</td>
                     <td><a href="{{route('profile',['id' =>$user->id])}}" class="btn btn-primary">View Performance Evaluation</a></td>
                     </tr>  
+                    @endif
                     @endforeach
                   @endisset
                   
@@ -208,7 +210,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright © Sophia 2019</span>
+            <span>Copyright © Tega 2019</span>
           </div>
         </div>
       </footer>

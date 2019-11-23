@@ -11,7 +11,7 @@
 
     <style>
         body{
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    background: -webkit-linear-gradient(left, #000, #fff);
 }
 .emp-profile{
     padding: 3%;
@@ -24,7 +24,7 @@
     text-align: center;
 }
 .profile-img img{
-    width: 70%;
+    width: 65%;
     height: 100%;
 }
 .profile-img .file {
@@ -109,7 +109,7 @@
 </head>
 <body>
         <div class="container emp-profile">
-        <a href="{{route('dashboard')}}" class="btn btn-primary my-3 mb-2">Back To Dashboard</a>
+        <a href="{{route('dashboard')}}" class="btn btn-secondary my-3 mb-2">Back To Dashboard</a>
                 <form method="post">
                     <div class="row">
                         <div class="col-md-4">
@@ -130,12 +130,12 @@
                                             {{$user->staffDetails ? $user->staffDetails->position : ""}}
                                         </h5>
                                     <p class="proile-rating">Evaluation Score : <span>{{$score}}%({{$remark}})</span></p>
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                {{-- <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                                     </li>
                                     
-                                </ul>
+                                </ul> --}}
                             </div>
                         </div>
                         @if(Auth::user()->id == $user->id)
@@ -152,8 +152,6 @@
                                 
                                 <p>SKILLS</p>
                                 <a href="">Web development</a><br/>
-                                <a href=""> UI/UX </a><br/>
-                                
                             </div>
                         </div>
                         <div class="col-md-8">
@@ -200,7 +198,7 @@
                                                 </div>
                                             </div>
                                 </div>
-                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-ta">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <label>Experience</label>
