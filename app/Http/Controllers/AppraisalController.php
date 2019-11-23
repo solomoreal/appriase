@@ -18,7 +18,6 @@ class AppraisalController extends Controller
     
     public function create($id)
     {
-        //$user = User::findOrFail($id);
         $user = User::findOrFail($id);
         return view('appraise',compact('user'));
     }
